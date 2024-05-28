@@ -26,7 +26,7 @@ function PostsNew() {
 }
 
 function PostsIndex(props) {
-  console.log("The prop is:", props)
+  console.log(props)
   return (
     <div id="posts-index">
       <h1>All posts</h1>
@@ -48,11 +48,30 @@ function PostsIndex(props) {
   )
 }
 function Content() {
-  let testyTest = "TEST"
+  let posts = [ /* normally this is a logic broken down api call? */
+    {
+      id: 1,
+      title: "Turrican is a Special Experience",
+      body: "test test test test test test",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBYTHOVYDjaL0b80ZmYC6rOTB4M_5co5UsKkkJkP62PQ&s",
+    },
+    {
+      id: 2,
+      title: "Mario Sunshine is Unique for its Immersion",
+      body: "test test test test test test",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFz4DPeS28tY6f9ldRNqAVZPmamJqrulPraGelulJhsw&s",
+    },
+    {
+      id: 3,
+      title: "Final Fantasy 15 is Underrated",
+      body: "test test test test test test",
+      image: "https://upload.wikimedia.org/wikipedia/en/5/5a/FF_XV_cover_art.jpg",
+    },
+  ];
   return (
     <div>
       <PostsNew />
-      <PostsIndex test={testyTest} />
+      <PostsIndex posts={posts}/>
     </div>
     
   )
