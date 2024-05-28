@@ -25,24 +25,34 @@ function PostsNew() {
   )
 }
 
-function PostsIndex() {
+function PostsIndex(props) {
+  console.log("The prop is:", props)
   return (
     <div id="posts-index">
       <h1>All posts</h1>
       <h2>Post Turrican, Date: January 23, 2011</h2>
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBYTHOVYDjaL0b80ZmYC6rOTB4M_5co5UsKkkJkP62PQ&s" />
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit laboriosam ratione amet nostrum. Error eaque, ipsum enim neque vel libero placeat quia iste vero amet quis necessitatibus similique sequi praesentium.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit laboriosam ratione amet nostrum. Error eaque, ipsum enim neque vel libero placeat quia iste vero amet quis necessitatibus similique sequi praesentium.
+      </p>
+      <p>
+        This is where we are putting test: {props.test}
+      </p>
       <h2>Post Super Mario Sunshine, Date: January 23, 2041</h2>
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFz4DPeS28tY6f9ldRNqAVZPmamJqrulPraGelulJhsw&s" />
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit laboriosam ratione amet nostrum. Error eaque, ipsum enim neque vel libero placeat quia iste vero amet quis necessitatibus similique sequi praesentium.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit laboriosam ratione amet nostrum. Error eaque, ipsum enim neque vel libero placeat quia iste vero amet quis necessitatibus similique sequi praesentium. 
+      </p>
+      <p>
+        This is where we are putting test: {props.test}
+      </p>
     </div>
   )
 }
 function Content() {
+  let testyTest = "TEST"
   return (
     <div>
       <PostsNew />
-      <PostsIndex />
+      <PostsIndex test={testyTest} />
     </div>
     
   )
