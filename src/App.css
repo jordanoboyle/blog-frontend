@@ -5,3 +5,7 @@
 html {
   scroll-behavior: smooth;
 }
+
+.imageOne {
+  size: 200px;
+}
